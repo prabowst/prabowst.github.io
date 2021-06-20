@@ -1,0 +1,160 @@
+<!DOCTYPE HTML>
+<!--
+	Editorial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Prabowo Setiawan - About Me</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<style>
+		h1 {
+			font-size: 300%;
+		}
+	</style>
+	<body class="is-preload">
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Main -->
+					<div id="main">
+						<div class="inner">
+
+							<!-- Header -->
+								<header id="header">
+									<a href="index.html" class="logo"><strong>Data Science</strong> Portfolio</a>
+									<ul class="icons">
+										<li><a href="https://www.linkedin.com/in/prabowo-setiawan/" class="icon brands fa-linkedin"><span class="label">LinkedIn</span></a></li>
+										<li><a href="https://medium.com/@prabowoas1002/" class="icon brands fa-medium-m"><span class="label">Medium</span></a></li>
+										<li><a href="mailto:prabowo.ast@gmail.com" class="icon solid fa-envelope"><span class="label">Email</span></a></li>
+									</ul>
+								</header>
+							<!-- Content -->
+								<section>
+									<header class="main">
+										<h1>Starbucks Customer Behavior - Rewards App</h1>
+									</header>
+									<span class="image right title"><img src="images/starbucks.jpg" alt="" /></span>
+									<h2>Project Description</h2>
+									<p>
+										The project aims to build a robust machine learning model in determining customers behavior of Starbucks rewards mobile app. The data sets provided are simulated version of the rewards mobile app data. The data sets are cleaned, explored, processed into one master DataFrame which is fed into various machine learning models. The data sets contain the types of offers given by the rewards app, customers demographic information, and their transactions. <br></br>
+
+										The machine learning model is selected through exploration of multiple classifiers. The learning curve analysis is used to filter which models would perform best by avoiding underfitting and overfitting. This analysis is then proven further by calculating the confusion matrix metrics.
+                                    </p>
+									<h2>Project Result: Model Selection</h2>
+                                    <p>
+										The XGB Classifier is chosen as the best machine learning model for this classification problem. The accuracy of this model reaches up to 91.43% on training set, further confirmed with confusion matrix to avoid class prediction bias. This can be seen from the following plots of confusion matrix and learning curve. The confusion matrix, which is calculated on the test set, indicates roughly 90% and above for both true negative and true positive. <br></br>
+										
+										In a different perspective, this also proves that learning curve analysis can be useful in choosing a model with the best fit through applying multiple training sample sizes and looking at both the training and validation scores. The confusion matrix tested on the test data set and the learning curve for XGB Classifier is shown below.
+                                    </p>
+
+                                    <span class="image left"><img src="images/confusion_matrix.svg" alt="" /></span>
+									<span class="image left"><img src="images/learning_curve_xgbclassifier.svg" alt="" /></span>
+
+									<h2>Project Result: Feature Importance</h2>
+
+									<p>
+										<span class="image mid"><img src="images/XGB_feature_importance.svg" alt="" /></span> <br></br>
+										The feature importance plot specifies that the three following features to be the most important: 
+										<ul>
+											<li>offer_duration</li>
+											<li>money_spent</li>
+											<li>channel_social</li>
+										</ul>
+
+										Let's take a look at each of these features. Offer duration might be significant since it specifies the number of days the duration of the offer lasts. The longer the offer lasts, the higher the chance for a particular customer to fulfill its requirement. How about money spent? Unlike income, the money spent by a user typically reflects a closer lifestyle of that person. The more often you buy, the higher the chance that you will buy enough to meet the offer conditions. This is more informational than the income information, since it only gives an idea of how much money they make, not how much money they are willing to spend. <br></br>
+
+										Finally, the social channel feature. The fact that this comes in the top three features signifies how social channel is the one that people pay more attention to (obviously does not apply for everyone). This can be used as a reasoning for Starbucks to concentrate more on advertising/sending their offers through these social channels, instead of through web for example. One thing to note though, the email channel is not included in the training data since it contains little to no variation between datasets. Therefore, it might interesting to do a little further experiment to see if whether email is a more effective and efficient method of sending Starbucks offers.
+									</p>
+
+									<h2>Conclusion & Future Improvement</h2>
+
+									<p>
+										Based on these findings, Starbucks can concentrate on campaigning its variety of offers through social channels while maintaining a moderate offer duration for the customers. Trying to find a customer with higher money spent within certain time frames might be beneficial rather than keeping track of their yearly income. As for gender, it does not seem that there should be any preferences for Starbucks to target, as long as these offers are sent based on the parameters discussed. <br></br>
+
+										There are several improvements that can be implemented: 
+
+										<ul>
+											<li>Perform a thorough experiment:
+												<ul>
+													<li>
+														This can be performed using A/B Testing where one group consists of people who are exposed to the offers only from web while the other is from social channels.
+													</li>
+													<li>
+														Another experiment that concentrates on determining what offer duration to be best for these customers so that Starbucks can design an offer that would specifically target this behavior.
+													</li>
+												</ul>
+											</li>
+											<li>A better model tuning:
+												<ul>
+													<li>
+														Due to limitation of computing power (running on local machine), only several parameters of XGB Classifier were successfully tuned. Therefore this model can definitely be improved to a higher accuracy.
+													</li>
+												</ul>
+											</li>
+											<li>A better step or method in combining the data sets:
+												<ul>
+													<li>
+														Definitely the main bottleneck of the project, since this process takes a long time to run. It might be beneficial to perform this process using a different method rather than implementing a nested loop.
+													</li>
+												</ul>
+											</li>
+										</ul>
+									</p>
+									
+									<h3>Links</h3>
+									<a href="https://github.com/prabowst/starbucks-customer-behavior" class="icon brands fa-github"><span class="label">Github</span><strong> Github Repository</strong></a>
+									<a href="projects_html/starbucks_customer_behavior.html" class="icon brands fa-github-alt"><span class="label"></span><strong>Jupyter Notebook</strong></a>
+									<!--hr class="major" />
+
+									<h2>Magna etiam veroeros</h2>
+									<p>Content</p>
+									<p>Content</p-->
+								</section>
+						</div>
+					</div>
+
+				<!-- Sidebar -->
+				<div id="sidebar">
+					<div class="inner">
+						<!-- Menu -->
+							<nav id="menu">
+								<header class="major">
+									<h2>Menu</h2>
+								</header>
+								<ul>
+									<li><a href="index.html">Home</a></li>
+									<li><a href="about_me.html">About Me</a></li>
+									<li><a href="resume.html">Resume</a></li>
+									<li>
+										<span class="opener">Projects</span>
+										<ul>
+											<li><a href="starbucks.html">Starbucks Customer Behavior - Rewards App</a></li>
+										</ul>
+									</li>
+								</ul>
+							</nav>
+
+						<!-- Footer -->
+							<footer id="footer">
+								<p class="copyright">&copy; HTML5 UP. All rights reserved. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
+							</footer>
+
+					</div>
+				</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
